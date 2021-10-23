@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link th:href="@{/css/w3style/w3.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="w3-panel w3-padding-32">
+		<h1>Spring Boot with Items Iterable List from BD H2</h1>
+		<h3>Table of items</h3>
+
+		<table class="w3-table-all">
+			<tr class="w3-black w3-hover-teal">
+				<td>ID</td>
+				<td>Bran</td>
+				<td>Description</td>
+				<td>Model</td>
+				<td>Price</td>
+				<td>Type</td>
+				
+<!-- 				<td>actions</td> -->
+
+			</tr>
+			<tr th:each="item:${items}">
+				<td th:text="${item.id}"></td>
+				<td th:text="${item.brand}"></td>
+				<td th:text="${item.description}"></td>
+				<td th:text="${item.model}"></td>
+				<td th:text="${item.price}"></td>
+				<td th:text="${item.type}"></td>
+
+				<td><a th:href="@{deleteItem(id=${item.id})}"
+					class="w3-button w3-red">Delete</a> <a
+					th:href="@{detail(id=${item.id})}"
+					class="w3-button w3-teal">Detail</a> <a
+					th:href="@{updateItem(id=${item.id})}"
+					class="w3-button w3-blue">Update</a></td>
+
+
+			</tr>
+		</table>
+
+
+	</div>
+</body>
+</html>

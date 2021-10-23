@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome to my Spring Boot Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset="ISO-8859-1">
+<title>Fill in</title>
+<style>
+h2{
+text-align: center;
+color:pink
+}
+</style>
+</head>
+<body>
+	<div class="w3-container w3-card ">
+		<h2>Fill in and delete db</h2>
+		
+	</div>
+	<div class="w3-container w3-card-4 w3-display-middle w3-center"
+		style="width: 50%;">
+
+
+		<p>How many users do you want to create?</p>
+
+		<a th:href="@{/fillinuser(qtyToCreate=100)}"
+			class="w3-button w3-teal">Create 100 users</a>
+		<p></p>
+		<a th:href="@{/fillinuser(qtyToCreate=1000)}"
+			class="w3-button w3-teal">Create 1000 users</a>
+		<p></p>
+		<a th:href="@{/fillinuser(qtyToCreate=5000)}"
+			class="w3-button w3-teal">Create 5000 users</a>
+		<p></p>
+		<a th:href="@{/fillinuser(qtyToCreate=10000)}"
+			class="w3-button w3-teal">Create 10000 users</a>
+
+
+
+		<p></p>
+
+		<a th:href="@{/users/deleteAllUsers}" class="w3-button w3-pink">Delete
+			all users</a>
+		<p></p>
+		<p></p>
+
+
+
+	</div>
+
+</body>
+</html>

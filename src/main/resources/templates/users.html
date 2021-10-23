@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link th:href="@{/css/w3style/w3.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="w3-panel w3-padding-32">
+		<h1>Spring Boot with Users Iterable List from BD H2</h1>
+		<h3>Table of users</h3>
+
+		<table class="w3-table-all">
+			<tr class="w3-black w3-hover-teal">
+				<td>id</td>
+				<td>name</td>
+				<td>surname</td>
+				<td>age</td>
+				<td>email</td>
+				<td>adress</td>
+				<td>password</td>
+<!-- 				<td>actions</td> -->
+
+			</tr>
+			<tr th:each="user:${userListfromControllerAndDB}">
+
+				<td th:text="${user.id}"></td>
+				<td th:text="${user.name}"></td>
+				<td th:text="${user.surname}"></td>
+				<td th:text="${user.age}"></td>
+				<td th:text="${user.email}"></td>
+				<td th:text="${user.adress}"></td>
+				<td th:text="${user.password}"></td>
+
+				<td><a th:href="@{deleteUser(id=${user.id})}"
+					class="w3-button w3-red">Delete</a> <a
+					th:href="@{detailUser(id=${user.id})}"
+					class="w3-button w3-teal">Detail</a> <a
+					th:href="@{updateUser(id=${user.id})}"
+					class="w3-button w3-blue">Update</a></td>
+
+
+			</tr>
+		</table>
+
+
+	</div>
+</body>
+</html>
