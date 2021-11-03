@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.github.javafaker.Faker;
-
+//lol
 @Controller
 public class HomeController {
 
@@ -23,6 +23,11 @@ public class HomeController {
 	@RequestMapping({ "/index", "/" })
 	public String home() {
 		return "index";
+	}
+	
+	@RequestMapping({ "/collection.html" })
+	public String collection() {
+		return "collection";
 	}
 
 	@RequestMapping("/topics")
@@ -99,8 +104,8 @@ public class HomeController {
 
 	}
 
-	@RequestMapping({ "*", "*/*" })
-	public String notFound(Model model) {
+//	@RequestMapping({ "*", "*/*" })
+/*	public String notFound(Model model) {
 
 		String pattern = "yyyy-MM-dd HH:mm:ssZ";
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
@@ -108,5 +113,5 @@ public class HomeController {
 
 		return "notFound";
 	}
-
+*/
 }
