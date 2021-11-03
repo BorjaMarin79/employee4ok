@@ -214,7 +214,7 @@ button {
 .header_section{
 	width: 100%;
 	float: left;
-	background-image: url(images/banner.png);
+	background-image: url(../static/images/banner.png);
 	height: auto;
 	padding: 20px 0px;
 	background-size: 100%;
@@ -445,7 +445,7 @@ body{
 .about-img2{
 	width: 100%;
 	float: left;
-	background-image: url(../images/about-img2.png);
+	background-image: url(images/about-img2.png);
 	height: auto;
 	box-shadow: 0px 0px 10px 0px;
 	margin-left: -50px;
@@ -653,7 +653,7 @@ a:hover {
 .shop_banner{
 	width: 100%;
 	float: left;
-	background-image: url(../images/shop-banner.png);
+	background-image: url(images/shop-banner.png);
 	height: auto;
 	padding: 70px;
 }
