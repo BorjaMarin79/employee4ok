@@ -29,6 +29,11 @@ public class HomeController {
 	public String collection() {
 		return "collection";
 	}
+	
+	@RequestMapping({ "/shoes.html" })
+	public String shoes() {
+		return "shoes";
+	}
 
 	@RequestMapping("/topics")
 	public String todoTopics() {
